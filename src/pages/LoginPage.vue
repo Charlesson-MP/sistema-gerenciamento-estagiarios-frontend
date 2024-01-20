@@ -1,98 +1,78 @@
 <template>
   <q-page>
     <!-- content -->
-    <div class="row">
-      <div id="div-form" class="col-6 text-center">
+    <div class="row" style="background: white;">
+      <div id="formatDiv" class="col-xs-12 col-sm-12 col-md-6 text-center">
         <q-img
-          id="logo-prefeitura-form"
           alt="logo-prefeitura"
-          src="../assets/Brasão_Vitoria_da_Conquista.svg"/>
-        <p class="text-h5" style="font-weight: bolder;">EstagiHub</p>
-        <q-form style="padding: 25px;" class="row q-gutter-y-sm q-mx-md"
-          @submit="onSubmit"
-          @reset="onReset"
-          ref="myForm"
+          src="../assets/Brasão_Vitoria_da_Conquista.svg"
+          width="70px"
+        />
+        <p class="text-h4">EstagiHub</p>
+        <q-form
+          class="q-gutter-y-md"
         >
-
-          <!--Caixa de entrada para o email-->
-          <p class="text-h6" style="margin-bottom: -5px;">Usuario</p>
+          <p class="text-h6">Usuário</p>
           <q-input
             outlined
             label="Digite seu email"
-            suffix="@gmail.com"
-            :rules="[
-              val => val.length > 0 || 'Campo obrigatório.'
-            ]"
-            class="col-xs-12
-                  col-sm-12
-                  col-md-12"
-          >
-            <template v-slot:prepend>
-              <q-icon name="mail"/>
-            </template>
-          </q-input>
-          <!--Fim da caixa de entrada do email-->
+          ></q-input>
 
-          <!--Caixa de entrada para o email-->
-          <p class="text-h6" style="margin-bottom: -5px;">Senha</p>
+          <p class="text-h6">Senha</p>
           <q-input
             outlined
-            label="Digite seu email"
-            suffix="@gmail.com"
-            :rules="[
-              val => val.length > 0 || 'Campo obrigatório.'
-            ]"
-            class="col-xs-12
-                  col-sm-12
-                  col-md-12"
-          >
-            <template v-slot:prepend>
-              <q-icon name="password"/>
-            </template>
-          </q-input>
-          <!--Fim da caixa de entrada do email-->
-          <q-btn
-            class="col-12"
-            style="margin-top: 30px;"
-            color="primary"
-            type="submit"
+            label="Digite sua senha"
+          ></q-input>
+
+          <q-btn color="primary"
             label="Entrar"
           ></q-btn>
-
         </q-form>
-
       </div>
-      <div id="div-img" class="col-6 text-center">
+      <div id="formatDiv" class="col-xs-12 col-sm-12 col-md-6 text-center">
         <q-img
-          alt="imagem-page"
-          src="src\assets\report-analysis-monochromatic (1).svg"
-          style="width: 100%; max-width: 600px;"
-        />
+          alt="Imagem"
+          src="../assets/report-analysis-monochromatic (1).svg"
+          width="480px"
+        ></q-img>
         <q-img
-          style="margin: 10px"
-          width="60px"
           alt="logo-prefeitura"
-          src="../assets/Brasão_Vitoria_da_Conquista.svg"/>
+          src="../assets/Brasão_Vitoria_da_Conquista.svg"
+          width="80px"
+          style="margin: 50px"
+        ></q-img>
       </div>
     </div>
   </q-page>
 </template>
 
 <style>
-#logo-prefeitura-form {
-  width: 80px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
 .q-page {
+  background-color: rgb(210, 210, 226);
   padding: 5px;
-  background-color: rgb(233, 219, 247);
 }
 
-#div-form {
-  background-color: white;
+.row {
   border-radius: 5px;
+}
+
+#formatDiv {
+  padding: 20px;
+}
+
+.text-h4 {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.text-h6 {
+  text-align: start;
+  margin-bottom: 5px;
+}
+
+.q-btn {
+  width: 100%;
+  margin-top: 30px;
 }
 </style>
 
