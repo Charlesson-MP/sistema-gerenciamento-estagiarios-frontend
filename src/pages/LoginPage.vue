@@ -33,13 +33,11 @@
         <q-img
           alt="Imagem"
           src="../assets/report-analysis-monochromatic (1).svg"
-          width="480px"
         ></q-img>
         <q-img
           alt="logo-prefeitura"
           src="../assets/Brasão_Vitoria_da_Conquista.svg"
           width="80px"
-          style="margin: 50px"
         ></q-img>
       </div>
     </div>
@@ -57,7 +55,7 @@
 }
 
 #formatDiv {
-  padding: 20px;
+  padding: 15px 25px 20px 25px;
 }
 
 .text-h4 {
