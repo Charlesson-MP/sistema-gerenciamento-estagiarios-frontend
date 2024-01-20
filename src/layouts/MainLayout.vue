@@ -14,8 +14,7 @@
         <q-toolbar-title>
           <q-avatar>
             <img
-              alt="logo-manager-edu-pequeno"
-              style="width: 60px;"
+              alt="logo-prefeitura"
               src="../assets/Brasão_Vitoria_da_Conquista.svg">
           </q-avatar>
           Estagi<span style="color: yellow;">Hub</span>
