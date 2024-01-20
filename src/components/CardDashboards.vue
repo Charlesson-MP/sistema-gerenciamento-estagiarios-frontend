@@ -3,6 +3,7 @@ const props = defineProps(['titulo', 'conteudo'])
 </script>
 
 <template>
+
     <div class="card-container" style="background-color: {{ props.color }};">
         <p class="text-h5">{{ props.titulo }}</p>
         <p>{{ props.conteudo }}</p>
