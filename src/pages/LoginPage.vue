@@ -46,7 +46,7 @@
   </q-page>
 </template>
 
-<style>
+<style scooped>
 .q-page {
   background-color: rgb(210, 210, 226);
   padding: 5px;

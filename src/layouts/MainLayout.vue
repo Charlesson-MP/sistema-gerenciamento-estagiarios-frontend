@@ -28,7 +28,7 @@
     <q-drawer
       :breakpoint="300"
       v-model="leftDrawerOpen"
-      :show-if-above="false"
+      show-if-above
       elevated
       style="background-color: rgb(213, 213, 241);"
     >
