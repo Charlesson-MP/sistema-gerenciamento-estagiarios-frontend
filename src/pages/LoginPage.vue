@@ -24,7 +24,9 @@
             label="Digite sua senha"
           ></q-input>
 
-          <q-btn color="primary"
+          <q-btn
+            to="dashboards"
+            color="primary"
             label="Entrar"
           ></q-btn>
         </q-form>
