@@ -1,5 +1,5 @@
 <script setup>
-import CardDashboards from 'src/components/CardDashboards.vue'
+import CardDashboards from '../components/CardDashboards.vue'
 </script>
 
 <template>
