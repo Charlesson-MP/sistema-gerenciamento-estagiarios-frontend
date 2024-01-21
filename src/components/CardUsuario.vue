@@ -1,4 +1,30 @@
 <script setup>
+const columns = [
+  {
+    nome: 'nome',
+    label: 'Nome',
+    align: 'left',
+    sortable: true
+  },
+  {
+    nome: 'perfil',
+    label: 'Perfil',
+    align: 'left',
+    sortable: true
+  },
+  {
+    nome: 'status',
+    label: 'Status',
+    align: 'left',
+    sortable: true
+  },
+  {
+    nome: 'acoes',
+    label: 'Ações',
+    align: 'left',
+    sortable: true
+  }
+]
 </script>
 
 <template>
@@ -21,6 +47,15 @@
               <q-icon name="search" />
             </template>
           </q-input>
+        </div>
+      </q-card-section>
+      <q-card-section>
+        <div class="q-pa-md">
+          <q-table
+            :columns="columns"
+            row-key="name"
+            flat bordered
+          />
         </div>
       </q-card-section>
     </q-card>
