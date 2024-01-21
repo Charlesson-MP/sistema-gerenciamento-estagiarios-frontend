@@ -1,28 +1,29 @@
 <script setup>
 const columns = [
   {
-    nome: 'nome',
+    name: 'nome',
+    required: true,
     label: 'Nome',
-    align: 'left',
+    align: 'center',
+    field: row => row.name,
+    format: val => `${val}`,
     sortable: true
   },
+  { name: 'email', align: 'center', label: 'Email', field: 'email', sortable: true },
+  { name: 'telefone', align: 'center', label: 'Telefone', field: 'telefone', sortable: true },
+  { name: 'perfil', align: 'center', label: 'Perfil', field: 'perfil' },
+  { name: 'status', align: 'center', label: 'Status', field: 'status' },
+  { name: 'acoes', align: 'center', label: 'Ações', field: 'acoes' }
+]
+
+const rows = [
   {
-    nome: 'perfil',
-    label: 'Perfil',
-    align: 'left',
-    sortable: true
-  },
-  {
-    nome: 'status',
-    label: 'Status',
-    align: 'left',
-    sortable: true
-  },
-  {
-    nome: 'acoes',
-    label: 'Ações',
-    align: 'left',
-    sortable: true
+    name: 'Charlesson',
+    email: 'charlessonmendes@gmail.com',
+    telefone: '(77)99115-3244',
+    perfil: 'Admin',
+    status: 'Ativo',
+    acoes: ''
   }
 ]
 </script>
@@ -52,9 +53,13 @@ const columns = [
       <q-card-section>
         <div class="q-pa-md">
           <q-table
+            separator="cell"
+            flat bordered
+            title="Lista de usuários"
+            :rows="rows"
+            dense
             :columns="columns"
             row-key="name"
-            flat bordered
           />
         </div>
       </q-card-section>
