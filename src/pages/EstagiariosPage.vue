@@ -1,12 +1,10 @@
 <template>
   <q-page padding>
     <!-- content -->
-    estagiarios
+    <CardEstagiarioVue></CardEstagiarioVue>
   </q-page>
 </template>
 
-<script>
-export default {
-  // name: 'PageName',
-}
+<script setup>
+import CardEstagiarioVue from 'src/components/CardEstagiario.vue'
 </script>
