@@ -54,11 +54,12 @@ const rows = [
       <q-card-section>
         <div class="row">
           <q-btn class="col-2 q-mr-xl" color="primary" @click="addNovoEstagiario">+ Novo Estagiário</q-btn>
-          <q-input class="col-6 q-ml-xl" filled label="Pesquisar ...">
+          <q-input dense class="col-6 q-ml-xl" filled label="Pesquisar ...">
             <template v-slot:prepend>
               <q-icon name="search" />
             </template>
           </q-input>
+          <q-btn class="col-2 q-ml-lg" color="primary">Pesquisar</q-btn>
         </div>
       </q-card-section>
       <q-card-section>
@@ -89,8 +90,8 @@ const rows = [
           </div>
         </div>
         <div class="row q-ma-md">
-          <q-btn class="q-mr-md" color="primary" @click="addNovoUsuario">Adicionar</q-btn>
-          <q-btn color="negative" @click="addNovoUsuario">Cancelar</q-btn>
+          <q-btn class="q-mr-md" color="primary" @click="addNovoEstagiario">Adicionar</q-btn>
+          <q-btn color="negative" @click="addNovoEstagiario">Cancelar</q-btn>
         </div>
     </q-card-section>
   </q-card>

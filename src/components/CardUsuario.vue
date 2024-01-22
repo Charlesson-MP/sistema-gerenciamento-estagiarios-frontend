@@ -54,14 +54,17 @@ const rows = [
           Usuários
         </q-toolbar-title>
       <q-card-section v-if="!novoUsuario">
-        <div class="row">
-          <q-btn class="col-2 q-mr-xl" color="primary" @click="addNovoUsuario">+ Novo Usuário</q-btn>
-          <q-input class="col-6 q-ml-xl" filled label="Pesquisar ...">
+        <q-form class="row q-gutter-y-md q-gutter-y-md"
+          ref="myForm"
+        >
+          <q-btn class="col-xs-12 col-sm-2 col-md-2 col-lg-2 q-px-md" size="sm" color="primary" @click="addNovoUsuario">+ Novo Usuário</q-btn>
+          <q-input class="col-xs-12 col-sm-8 col-md-8 col-lg-8 q-px-md" dense filled label="Pesquisar ...">
             <template v-slot:prepend>
               <q-icon name="search" />
             </template>
           </q-input>
-        </div>
+          <q-btn size="sm" class="col-xs-12 col-sm-2 col-md-2 col-lg-2 q-px-md" color="primary">Pesquisar</q-btn>
+        </q-form>
       </q-card-section>
       <q-card-section v-if="!novoUsuario">
         <div class="q-pa-md">
