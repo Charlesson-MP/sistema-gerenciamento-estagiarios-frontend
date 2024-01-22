@@ -1,6 +1,12 @@
 <script setup>
 import { ref } from 'vue'
 
+const modeloStatus = ref(null)
+const opcoesStatus = ['Ativo', 'Inativo']
+
+const modeloPerfil = ref(null)
+const opcoesPerfil = ['Admin', 'Usuário']
+
 const novoUsuario = ref(false)
 function addNovoUsuario () {
   novoUsuario.value = !novoUsuario.value
@@ -76,10 +82,10 @@ const rows = [
             <q-input class="q-ma-md" filled label="Nome"></q-input>
             <q-input class="q-ma-md" filled label="E-mail"></q-input>
             <q-input class="q-ma-md" filled label="Telefone"></q-input>
-            <q-input class="q-ma-md" filled label="Perfil"></q-input>
+            <q-select v-model="modeloPerfil" class="q-ma-md" filled :options="opcoesPerfil" label="Perfil" />
           </div>
           <div class="col-6">
-            <q-input class="q-ma-md" filled label="Status"></q-input>
+            <q-select v-model="modeloStatus" class="q-ma-md" filled :options="opcoesStatus" label="Status" />
             <q-input class="q-ma-md" filled label="Senha"></q-input>
             <q-input class="q-ma-md" filled label="Repetir senha"></q-input>
           </div>
