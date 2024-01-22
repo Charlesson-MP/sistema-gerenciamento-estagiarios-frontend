@@ -1,4 +1,11 @@
 <script setup>
+import { ref } from 'vue'
+
+const novoUsuario = ref(false)
+function addNovoUsuario () {
+  novoUsuario.value = !novoUsuario.value
+}
+
 const columns = [
   {
     name: 'nome',
@@ -40,9 +47,9 @@ const rows = [
           </q-avatar>
           Usuários
         </q-toolbar-title>
-      <q-card-section>
+      <q-card-section v-if="!novoUsuario">
         <div class="row">
-          <q-btn class="col-2 q-mr-xl" color="primary">+ Novo Usuário</q-btn>
+          <q-btn class="col-2 q-mr-xl" color="primary" @click="addNovoUsuario">+ Novo Usuário</q-btn>
           <q-input class="col-6 q-ml-xl" filled label="Pesquisar ...">
             <template v-slot:prepend>
               <q-icon name="search" />
@@ -50,7 +57,7 @@ const rows = [
           </q-input>
         </div>
       </q-card-section>
-      <q-card-section>
+      <q-card-section v-if="!novoUsuario">
         <div class="q-pa-md">
           <q-table
             separator="cell"
@@ -61,6 +68,25 @@ const rows = [
             :columns="columns"
             row-key="name"
           />
+        </div>
+      </q-card-section>
+      <q-card-section v-if="novoUsuario">
+        <div class="row">
+          <div class="col-6">
+            <q-input class="q-ma-md" filled label="Nome"></q-input>
+            <q-input class="q-ma-md" filled label="E-mail"></q-input>
+            <q-input class="q-ma-md" filled label="Telefone"></q-input>
+            <q-input class="q-ma-md" filled label="Perfil"></q-input>
+          </div>
+          <div class="col-6">
+            <q-input class="q-ma-md" filled label="Status"></q-input>
+            <q-input class="q-ma-md" filled label="Senha"></q-input>
+            <q-input class="q-ma-md" filled label="Repetir senha"></q-input>
+          </div>
+        </div>
+        <div class="row q-ma-md">
+          <q-btn class="q-mr-md" color="primary" @click="addNovoUsuario">Adicionar</q-btn>
+          <q-btn color="negative" @click="addNovoUsuario">Cancelar</q-btn>
         </div>
       </q-card-section>
     </q-card>
