@@ -55,7 +55,7 @@ const rows = [
         <q-form class="row q-gutter-y-md q-gutter-y-md"
           ref="myForm"
         >
-          <q-btn class="col-xs-12 col-sm-2 col-md-2 col-lg-2 q-px-md" size="sm" color="primary" @click="addNovoUsuario">+ Novo Usuário</q-btn>
+          <q-btn class="col-xs-12 col-sm-2 col-md-2 col-lg-2 q-px-md" size="sm" color="primary" @click="novoEstagiario">+ Novo Usuário</q-btn>
           <q-input class="col-xs-12 col-sm-8 col-md-8 col-lg-8 q-px-md" dense filled label="Pesquisar ...">
             <template v-slot:prepend>
               <q-icon name="search" />
