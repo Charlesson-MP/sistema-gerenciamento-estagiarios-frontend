@@ -25,7 +25,6 @@
     </q-header>
 
     <q-drawer
-      :breakpoint="300"
       v-model="leftDrawerOpen"
       show-if-above
       elevated
@@ -49,8 +48,17 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+    <q-footer id="rodape">Desenvolvido por CTI</q-footer>
   </q-layout>
 </template>
+
+<style scooped>
+#rodape {
+  text-align: center;
+  color:white;
+  background-color: black;
+}
+</style>
 
 <script>
 import { defineComponent, ref } from 'vue'
