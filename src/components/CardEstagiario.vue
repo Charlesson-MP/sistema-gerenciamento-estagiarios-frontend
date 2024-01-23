@@ -78,7 +78,7 @@ const rows = [
         </div>
       </q-card-section>
     </div>
-    <q-card-section v-if="novoEstagiario">
+    <q-card-section class="col" v-if="novoEstagiario">
       <div class="row">
           <div class="col-6">
             <q-input class="q-ma-md" filled label="Nome"></q-input>
@@ -90,11 +90,11 @@ const rows = [
             <q-input class="q-ma-md" filled label="Senha"></q-input>
             <q-input class="q-ma-md" filled label="Repetir senha"></q-input>
           </div>
-        </div>
-        <div class="row q-ma-md">
-          <q-btn class="q-mr-md" color="primary" @click="addNovoEstagiario">Adicionar</q-btn>
-          <q-btn color="negative" @click="addNovoEstagiario">Cancelar</q-btn>
-        </div>
+      </div>
+      <div class="row flex flex-center">
+        <q-btn class="q-my-md col-xs-10 col-sm-10 col-md-10 col-lg-10" color="primary" @click="addNovoEstagiario">Adicionar</q-btn>
+        <q-btn class="q-my-md col-xs-10 col-sm-10 col-md-10 col-lg-10" color="negative" @click="addNovoEstagiario">Cancelar</q-btn>
+      </div>
     </q-card-section>
   </q-card>
 </template>
