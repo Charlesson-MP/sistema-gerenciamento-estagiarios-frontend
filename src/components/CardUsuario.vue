@@ -93,9 +93,9 @@ const rows = [
             <q-input class="q-ma-md" filled label="Repetir senha"></q-input>
           </div>
         </div>
-        <div class="row q-ma-md">
-          <q-btn class="q-mr-md" color="primary" @click="addNovoUsuario">Adicionar</q-btn>
-          <q-btn color="negative" @click="addNovoUsuario">Cancelar</q-btn>
+        <div class="row flex flex-center">
+          <q-btn class="q-my-md col-xs-10 col-sm-10 col-md-10 col-lg-10" color="primary" @click="addNovoUsuario">Adicionar</q-btn>
+          <q-btn class="q-my-md col-xs-10 col-sm-10 col-md-10 col-lg-10" color="negative" @click="addNovoUsuario">Cancelar</q-btn>
         </div>
       </q-card-section>
     </q-card>
