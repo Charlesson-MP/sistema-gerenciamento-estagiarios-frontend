@@ -1,8 +1,10 @@
 <template>
-  <q-layout view="hHh lpR fFf">
+  <q-layout style="background-color: rgb(213, 213, 241);;" view="hHh lpR fFf">
     <q-header elevated style="height: 60px; background-color: rgb(11, 11, 83);">
-      <q-toolbar>
+      <q-toolbar class="row" style="align-items: center;">
         <q-btn
+          style="margin: 10px 10px 10px 10px;"
+          class="col-0"
           flat
           dense
           round
@@ -11,7 +13,7 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>
+        <q-toolbar-title class="col-sm-9.5 col-md-10">
           <q-avatar>
             <img
               alt="logo-prefeitura"
@@ -20,7 +22,14 @@
           Estagi<span style="color: yellow;">Hub</span>
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div class="col-sm-2 col-md-4 q-ml-mxs" style="background-color: rgb(53, 53, 134); border-radius: 20px;">
+          <q-img
+            src="../assets/manager-outline.svg"
+            spinner-color="white"
+            style="height: 60px; max-width: 60px;margin-top: 0px;"
+          />
+          Usuário
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -57,6 +66,10 @@
   text-align: center;
   color:white;
   background-color: black;
+}
+
+.q-btn {
+  padding: 0px;
 }
 </style>
 
